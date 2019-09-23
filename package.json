@@ -1,0 +1,19 @@
+{
+  "name": "serverlesspayment",
+  "version": "1.0.0",
+  "description": "demo created to simulate a payment service on a serverless architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wukimmy/serverlesspayment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wukimmy/serverlesspayment/issues"
+  },
+  "homepage": "https://github.com/wukimmy/serverlesspayment#readme"
+}
