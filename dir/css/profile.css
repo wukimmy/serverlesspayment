@@ -1,0 +1,182 @@
+html, body {
+    font-family: helvetica;
+    background: #f7f6f6;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#userBar {
+    background: #898989;
+    height: 100px;
+    margin: 0;
+    position: relative;
+}
+#userName {
+    position: absolute;
+    color: #232f3f;
+    font-weight: bold;
+    font-size: 2em;
+    left: 7.5%;
+    top: 20px;
+}
+#userRole {
+    position: absolute;
+    font-size: 1.4em;
+    left: 7.5%;
+    bottom: 20px;
+}
+#score {
+    position: absolute;
+    font-size: 1.6em;
+    right: 7.5%;
+    top: 22px;
+}
+#progress {
+    color: #000000;
+    position: absolute;
+    bottom: 25px;
+    right: 7.5%;
+}
+.container {
+    overflow: hidden;
+    position: absolute;
+    bottom: 50px;
+    top: 209.2px;
+    left: 50px;
+    right: 50px;
+}
+#pastDiv {
+    width: 47%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+}
+#scheduledDiv {
+    width: 48%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+#pastList {
+    padding: 2% 1.5% 0 0;
+    overflow-y: scroll;
+    height: 100%;
+}
+#borderList {
+    background-color: #d6d6d6;
+    position: relative;
+    height: 100%;
+    padding: 2% 0 2% 2%;
+}
+#scheduledList {
+    background: #d6d6d6;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    padding: 0 1.5% 0 1.5%;
+}
+.pastTitle {
+    padding: 2% 0 0 0;
+    border-bottom: 2px solid #13abaf;
+}
+.scheduledTitle {
+    background: #d6d6d6;
+    width: max-content;
+    border-radius: 10px 10px 0 0;
+    padding: 2% 2% 0 2%;
+}
+.title {
+    font-size: 200%;
+}
+#centerText {
+    text-align: center;
+}
+#shadow #date {
+    width: 15%;
+    color: #13abaf;
+    text-align: right;
+    font-size: 190%;
+    padding: 5px 0 5px 0;
+}
+#shadow #desc {
+    width: 85%;
+    padding: 5px 0 5px 0;
+}
+#shadow {
+    font-size: 110%;
+}
+
+
+#shadow_upcoming #date {
+    width: 15%;
+    color: #13abaf;
+    text-align: right;
+    font-size: 190%;
+    padding: 5px 0 5px 0;
+}
+#shadow_upcoming #desc {
+    width: 85%;
+    padding: 5px 0 5px 0;
+}
+#shadow_upcoming {
+    font-size: 110%;
+}
+
+/*#shadow:hover {
+    background-color: #ffffff;
+}*/
+#desc {
+    text-align: left;
+}
+#container {
+    background-color: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    height: 100%; 
+}
+tr:nth-child(odd) {
+    background: #f7f6f6
+}
+tr:nth-child(even) {
+    background: #d6d6d6;
+}
+#pastList tr {
+    border-bottom: 10px solid #f7f6f6;
+}
+#scheduledList tr {
+    border-bottom: 10px solid #d6d6d6;
+}
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+p {
+    margin: 0;
+}
+#mes {
+    color: #444444;
+    margin-right: 10%
+}
+#cellDate {
+    height: auto;
+    width: auto;
+    padding: 0 15% 0 15%;
+}
+#cellDes {
+    border-left: 2px solid #232F3F;
+    height: auto;
+    width: auto;
+    padding: 0 3% 0 3%;
+}
+
+li.id_shadow{
+    display: none;
+}

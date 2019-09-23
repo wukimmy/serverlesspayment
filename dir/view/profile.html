@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+	    <title>Robin - Profile</title>
+	    <link rel="stylesheet" type="text/css" href="../css/profile.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="../js/jquery.js"></script>
+	    <script src="../js/profile.js"></script>
+	    <script src="../js/moment.js"></script>
+        <script src="../js/jquery.cooki.js"></script>
+		<script src="../js/nav.js"></script>
+		<script src="../js/auth.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/amazon-cognito-auth.min.js"></script>
+  		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+  		<script src="../js/amazon-cognito-identity.min.js"></script>
+	</head>
+
+	<body>
+		<div nav="nav.html"></div>
+		<div id="userBar">
+			<p id="userName"></p>
+			<p id="userRole"></p>
+			<p id="score"></p>
+			<a id="progress" href="#">Check your progress</a>
+	    </div>
+	    <div class="container">
+	        <div id="pastDiv">
+	            <div class="pastTitle title">
+	                <p>Past Activities</p>
+	            </div>
+	            <div id="pastList">
+		            <table >
+		                <tbody id="past">
+		                </tbody>
+		            </table>
+		        </div>
+	        </div>
+	        <div id="scheduledDiv">
+	            <div class="scheduledTitle title">
+	                <p id="centerText">My Scheduled Activities</p>
+	            </div>
+	            <div id="borderList">
+	            	<div id="scheduledList">
+			            <table >
+			                <tbody id="scheduled">
+<!--                                <td class="id_shadow"></td>-->
+			                </tbody>
+			            </table>
+			        </div>
+		        </div>
+	        </div>
+	    </div>
+	</body>
+	<script>
+		includeHTML();
+		auth();
+	</script>
+</html>

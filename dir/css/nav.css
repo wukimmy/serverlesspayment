@@ -1,0 +1,33 @@
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #232f3f;
+  }
+  
+  .items {
+    float: left;
+  }
+  
+  .items a , i{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .items a:hover {
+    background-color:  #18212c;
+  }
+  i{
+      font-size: 195%;
+  }
+#nav{
+  width: 100%;
+}
+body{
+  margin-top: 0%;
+  margin:0; 
+  width: 100%;
+}

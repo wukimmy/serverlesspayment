@@ -1,0 +1,46 @@
+<!Doctype html>
+<head>
+    <title>Serverless payment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/signup.css">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Javascript SDKs-->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script src="../js/aws-cognito-sdk.min.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/amazon-cognito-auth.min.js"></script>
+    <script src="../js/amazon-cognito-identity.min.js"></script>
+    <script src="../js/cognito-register.js"></script>
+    
+    
+</head>
+<body>
+    <p id="title">Signup</p>
+    <div id="signup">
+        <form method="post">
+            <span class="icon">
+                <input type="text" id="nameInputRegister" name="name" class="fields" placeholder=" Full Name" required autofocus><br/>
+            </span>
+            </span>
+            <span class="icon">
+                <input type="date" id="brithDayRegister" name="birth" class="fields" placeholder=" Birthday" required autofocus><br/>
+            </span>
+            </span>
+            <span class="icon">
+                <input type="text" id="usernameInputRegister" name="email" class="fields" placeholder=" username@email.com" required autofocus><br/>
+            </span>
+            <span class="icon">
+                <input type="password" id="password1InputRegister" class="fields" name="password" placeholder=" Password" required><br/>
+            </span>
+            <span class="icon">
+                <input type="password" id="password2InputRegister" class="fields" name="confirmpassword" placeholder=" Repeat Password" required><br/>
+            </span>
+            <button type="button" class="button" onclick="signUp()">Register</button>
+        </form>
+    </div>
+</body>
+</html>

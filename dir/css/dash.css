@@ -1,0 +1,29 @@
+body {
+    font-family: helvetica;
+    background:orange;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 5%;
+}
+.container {
+    overflow: hidden;
+    position: absolute;
+    bottom: 50px;
+    top: 109.2px;
+    left: 50px;
+    right: 50px;
+}
+.centerText {
+    text-align: center;
+}
+#balanceDiv{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 150%;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 9px;
+}
+#balanceTitle{
+    margin: 3%;
+}

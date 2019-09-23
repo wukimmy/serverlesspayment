@@ -1,0 +1,35 @@
+<!Doctype html>
+  <head>
+    <title>Serverless payment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!--Style-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Javascript SDKs-->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script src="../js/aws-cognito-sdk.min.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/amazon-cognito-auth.min.js"></script>
+    <script src="../js/amazon-cognito-identity.min.js"></script>
+    <script src="./js/cognito-login.js"></script>
+  </head>
+  <body>
+    <p id="title">Serverless payment</p>
+    <div id="login">
+      <form method="post">
+          <span class="icon">
+            <input type="text" id="inputUsername" name="username" class="fields" placeholder="username@amazon.com" required>
+          </span>
+          <br>
+          <span class="icon">
+            <input type="password" id="inputPassword" name="password" class="fields" placeholder="password" required>
+          </span>
+          <button type="button" class="button" onclick="signIn()" href="../view/dashboard.html">Sign In</button>
+          <a href="./view/signup.html" id="signup">Don't have an account? Click here to sign up</a>
+      </form>
+    </div>
+  </body>
+</html>

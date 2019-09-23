@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> Robin - All activities - Search</title>
+        <link rel="stylesheet" type="text/css" href="../css/search.css">
+        <script src="../js/auth.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/amazon-cognito-auth.min.js"></script>
+  		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+  		<script src="../js/amazon-cognito-identity.min.js"></script>
+    </head>
+    <body >
+        <div nav="nav.html"></div>
+        <div class="container">
+            <div id="filters">
+                <div class="title">
+                    <p>Advanced Search</p>
+                </div>
+                <form>
+                    <label> Filter</label>
+                    <input id="key" type="text">
+                    <br>
+                    <select id="opcao">
+                        <option selected disabled hidden>Choose here</option>
+                    <option value="Training Session">Training Session</option>
+                    <option value="TCO - Calculator">TCO - Calculator</option>
+                    <option value="Workshop or Immersion Day">Workshop or Immersion Day</option>
+                    <option value="Proof of Concept (POC)">Proof of Concept</option>
+                    <option value="First Call Deck">First Call Deck</option>
+                    <option value="Office Hours">Office Hours</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Game Day">Game Day</option>
+                    <option value="Demo or Lab Guide Assistance">Demo or Lab Guide Assistance</option>
+                    <option value="Other">Other</option>
+                    </select>
+                    <br>
+                    <label> From</label>
+                    <input id="initialDate" type="date" value="start_date" >
+                    <input id="initialDate" type="time" value="start_date" >
+                    <br>
+                    <label> To</label>
+                    <input id="FinalDate" type="date" value="end_date" >
+                    <input id="FinalDate" type="time" value="start_date" >
+                    <input type="submit" id="enviar">
+                </form>
+            </div>
+            <div id="tableDiv">
+                <div class="title">
+                    <p>Activities</p>
+                </div>
+                <div id="tableList">
+                    <table id="tabela" >
+                        <tbody id="table">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/moment.js"></script>
+        <script src="../js/jquery.cooki.js"></script>
+        <script src="../js/nav.js"></script>
+        <script>
+            includeHTML();
+            auth();
+        </script>
+    </body>
+</html>
