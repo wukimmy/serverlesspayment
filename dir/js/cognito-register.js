@@ -37,7 +37,6 @@ function signUp() {
     Value: date
   };
  
-
   var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
   var attributeName = new AmazonCognitoIdentity.CognitoUserAttribute(dataName);
   var attributeBirthDay = new AmazonCognitoIdentity.CognitoUserAttribute(dataBirthDay);
@@ -52,6 +51,6 @@ function signUp() {
     }
     var cognitoUser = userPool.getCurrentUser();
     cognitoUser = result.user;
-    window.location.href = '../index.html';
+    window.location.href = './dashboard.html';
   });
 }
