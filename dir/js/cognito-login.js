@@ -43,6 +43,7 @@ function signIn() {
       for (i = 0; i < result.length; i++) {
         if (result[i].getName() == "sub") {
           _config.userInfo.sub = result[i].getValue();
+          document.cookie = "sub="+ _config.userInfo.sub
         } else if (result[i].getName() == "name") {
           _config.userInfo.name = result[i].getValue();
           document.cookie = "name="+ _config.userInfo.name

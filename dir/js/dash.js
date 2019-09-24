@@ -1,16 +1,18 @@
 var token;
 var name;
+var sub;
 function showUser() {
-    var name = readCookie('name')
+    var name = readCookie('name');
     document.getElementById('name').innerHTML = name;
-    token = readCookie('accessToken')
+    token = readCookie('accessToken');
+    sub = readCookie('sub');
     getBalance()
 }
 
 function getBalance() {
     $.ajax({
         type: 'GET',
-        url: _config.apiInfo.url + "/balance?acc=01",
+        url: _config.apiInfo.url + "/balance?acc=" + sub,
         crossDomain: true,
         crossOrigin: true,
         contentType: "application/json",
