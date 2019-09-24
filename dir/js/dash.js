@@ -6,19 +6,26 @@ function showUser() {
     document.getElementById('name').innerHTML = name;
     token = readCookie('accessToken');
     sub = readCookie('sub');
-    getBalance()
+    getBalance(sub)
+    console.log(sub)
+    console.log("all cookies: " + document.cookie)
+
+    //jquery('#qrcode').qrcode("this plugin is great");
 }
 
-function getBalance() {
+function getBalance(acc) {
+    console.log(acc)
     $.ajax({
         type: 'GET',
-        url: _config.apiInfo.url + "/balance?acc=" + sub,
+        url:"https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc,
         crossDomain: true,
         crossOrigin: true,
         contentType: "application/json",
         dataType: "json",
         headers: {
-            auth: token,
+            'Access-Control-Request-Headers':{
+                auth: token
+            }
         },
         success: function (data) {
             console.log(data);

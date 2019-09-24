@@ -25,6 +25,7 @@ function signIn() {
       _config.userInfo.accessToken = result.idToken.jwtToken;
       document.cookie = "accessToken="+_config.userInfo.accessToken;
       getUser();
+      console.log("getting user info 1")
       window.location.href = "../view/dashboard.html";
     },
     onFailure: function (err) {
@@ -36,20 +37,21 @@ function signIn() {
   function getUser() {
     console.log("getting user info")
     cognitoUser.getUserAttributes(function (err, result) {
+      console.log("inside get attribute")
       if (err) {
         alert(err.message);
         return;
       }
       for (i = 0; i < result.length; i++) {
         if (result[i].getName() == "sub") {
-          _config.userInfo.sub = result[i].getValue();
-          document.cookie = "sub="+ _config.userInfo.sub
+          document.cookie = "sub="+result[i].getValue();
         } else if (result[i].getName() == "name") {
           _config.userInfo.name = result[i].getValue();
           document.cookie = "name="+ _config.userInfo.name
-          console.log(_config.userInfo.name)
         }
       }
+      console.log(result)
     });
+   
   }
 }

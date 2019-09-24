@@ -1,5 +1,3 @@
-
-
 function signUp() {
   var poolData = {
     UserPoolId: _config.cognito.userPoolId,
@@ -36,7 +34,8 @@ function signUp() {
     Name: 'birthdate',
     Value: date
   };
- 
+
+
   var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
   var attributeName = new AmazonCognitoIdentity.CognitoUserAttribute(dataName);
   var attributeBirthDay = new AmazonCognitoIdentity.CognitoUserAttribute(dataBirthDay);
@@ -44,13 +43,13 @@ function signUp() {
   attributeList.push(attributeName);
   attributeList.push(attributeBirthDay);
 
-  userPool.signUp(username, password1, attributeList, null, function (err, result) {
+  userPool.signUp(username, password, attributeList, null, function (err, result) {
     if (err) {
       alert(err);
       return;
     }
     var cognitoUser = userPool.getCurrentUser();
     cognitoUser = result.user;
-    window.location.href = './dashboard.html';
+    //window.location.href = './dashboard.html';
   });
 }
