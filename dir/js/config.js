@@ -1,7 +1,7 @@
 window._config = {
   cognito: {
-    userPoolId: '${USER_POOL}',
-    clientId: '${CLIENT_ID}',
+    userPoolId: 'us-east-1_fHa7bKOAt',
+    clientId: 'alm29klv6358o1sq6nmetas8j',
     region: 'us-east-1'
   },
   userInfo: {
@@ -12,6 +12,6 @@ window._config = {
     session: 'dsfd'
   },
   apiInfo: {
-    url: 'https://2f8wgdo69f.execute-api.us-east-1.amazonaws.com/api'
+    url: 'https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev'
   }
 };

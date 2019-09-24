@@ -25,7 +25,7 @@ function signIn() {
       _config.userInfo.accessToken = result.idToken.jwtToken;
       document.cookie = "accessToken="+_config.userInfo.accessToken;
       getUser();
-      //window.location.href = "../view/dashboard.html";
+      window.location.href = "../view/dashboard.html";
     },
     onFailure: function (err) {
       console.log(err)
