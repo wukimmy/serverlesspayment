@@ -12,60 +12,27 @@ function showUser() {
         text: sub
     });
 }
-
 function getBalance(acc) {
     console.log(acc)
-    // $.ajax({
-    //     type: 'GET',
-    //     url:"https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc,
-    //     crossDomain: true,
-    //     crossOrigin: true,
-    //     contentType: "application/json",
-    //     dataType: "json",
-    //     headers: {
-    //         'Access-Control-Request-Headers':{
-    //             auth: token
-    //         }
-    //     },
-    //     success: function (data) {
-    //         console.log(data);
-    //     },
-    //     error: function(res){
-    //         alert("We had a problem with your account " + JSON.stringify(res))
-    //     }
-    // })
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("balance").innerHTML =
-                this.responseText;
+    $.ajax({
+        type: 'GET',
+        url: "https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc,
+        crossDomain: true,
+        contentType: "application/json",
+        dataType: "json",
+        beforeSend: function (jqXHR, settings) {
+            jqXHR.setRequestHeader('Authorization', token);
+        },
+        headers: {
+            Authorization: token
+        },
+        success: function (data) {
+            console.log(data)
+        },
+        error: function(err){
+            console.log(err)
         }
-    };
-    var url = "https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc;
-    // var body = 'auth:' + token;
-    // xhttp.open("GET", url, true);
-    // xhttp.setRequestHeader('auth', token )
-    // xhttp.setRequestHeader('crossOrigin', true )
-    // xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' )
-    // xhttp.send();
-    var xhr = createCORSRequest('GET', url);
-    xhr.send();
-}
-function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
-    xhr.setRequestHeader('auth', token )
-    return xhr;
-  }
-
+    })
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
