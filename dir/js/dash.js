@@ -7,6 +7,7 @@ function showUser() {
     token = readCookie('accessToken');
     sub = readCookie('sub');
     getBalance(sub)
+    console.log(document.cookie)
     jQuery('#qrcode').qrcode({
         render: "table",
         text: sub
