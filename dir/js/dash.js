@@ -33,6 +33,7 @@ function getBalance(acc) {
             console.log(err)
         }
     })
+}
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
