@@ -25,15 +25,14 @@ function getBalance(acc) {
         },
         headers: {
             Authorization: token,
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
         },
         success: function (data) {
             console.log(data)
         },
         error: function(err){
             console.log(err)
-        }
+        },
     })
 }
 function readCookie(name) {
