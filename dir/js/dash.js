@@ -24,7 +24,9 @@ function getBalance(acc) {
             jqXHR.setRequestHeader('Authorization', token);
         },
         headers: {
-            Authorization: token
+            Authorization: token,
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true,
         },
         success: function (data) {
             console.log(data)
