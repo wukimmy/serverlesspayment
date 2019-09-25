@@ -26,7 +26,7 @@ function signIn() {
       document.cookie = "accessToken="+_config.userInfo.accessToken;
       getUser();
       console.log("getting user info 1")
-      window.location.href = "../view/dashboard.html";
+      //window.location.href = "../view/dashboard.html";
     },
     onFailure: function (err) {
       console.log(err)
@@ -42,6 +42,7 @@ function signIn() {
         alert(err.message);
         return;
       }
+      console.log(result)
       for (i = 0; i < result.length; i++) {
         if (result[i].getName() == "sub") {
           document.cookie = "sub="+result[i].getValue();
