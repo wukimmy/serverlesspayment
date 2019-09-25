@@ -43,13 +43,29 @@ function getBalance(acc) {
         }
     };
     var url = "https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc;
-    var body = 'auth:' + token;
-    xhttp.open("GET", url, true);
-    xhttp.setRequestHeader('auth', token )
-    xhttp.setRequestHeader('crossOrigin', true )
-    //xhttp.onreadystatechange = handler;
-    xhttp.send({ 'auth': token});
+    // var body = 'auth:' + token;
+    // xhttp.open("GET", url, true);
+    // xhttp.setRequestHeader('auth', token )
+    // xhttp.setRequestHeader('crossOrigin', true )
+    // xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' )
+    // xhttp.send();
+    var xhr = createCORSRequest('GET', url);
+    xhr.send();
 }
+function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      xhr = null;
+    }
+    xhr.setRequestHeader('auth', token )
+    return xhr;
+  }
+
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
