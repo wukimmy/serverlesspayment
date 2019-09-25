@@ -24,15 +24,14 @@ function getBalance(acc) {
             jqXHR.setRequestHeader('Authorization', token);
         },
         headers: {
-            Authorization: token,
-            "Access-Control-Allow-Origin": "*"
+            Authorization: token
         },
         success: function (data) {
             console.log(data)
         },
         error: function(err){
             console.log(err)
-        },
+        }
     })
 }
 function readCookie(name) {
