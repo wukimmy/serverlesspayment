@@ -10,6 +10,7 @@
 	<script src="../js/config.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/dash.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -21,27 +22,29 @@
 	<script src="../js/amazon-cognito-auth.min.js"></script>
 	<script src="../js/amazon-cognito-identity.min.js"></script>
 	<script src="../js/cognito-register.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
+	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
 </head>
 
 <body onload="showUser()">
 	<div nav="nav.html"></div>
 	<div class="container">
-		<p class="title">Hi</p>
-		<p class="title" id="name"></p>
-		<div id="balanceDiv">
+			<span class="title">Hi, </span>
+			<label class="title" id="name"></label>
+		<div class="box">
 			<p class="centerText" id="balanceTitle">Balance:</p>
-			<p class="centerText" id="balance">00.0</p>
+			<p class="centerText" id="balance">---</p>
 		</div>
-		<div id="qrcode"></div>
-		<div>
+		<div class="box">
+			<div id="qrcode">Your QR code here</div>
+			<button onclick= "window.location.href='/view/form.html'">Make a payment</button>
+		</div>
+		
 		</div>
 	</div>
 </body>
 <script>
 	includeHTML();
-	auth();
+	//auth();
 </script>
 
 </html>

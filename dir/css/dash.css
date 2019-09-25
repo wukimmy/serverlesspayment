@@ -3,27 +3,49 @@ body {
     background:orange;
     overflow: hidden;
     margin: 0;
-    margin-bottom: 5%;
 }
+.title{
+    position: relative;
+    font-size: 200%;
+    color: #431D70;
+    text-align: center;
+    align-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
 .container {
-    overflow: hidden;
-    position: absolute;
-    bottom: 50px;
-    top: 109.2px;
-    left: 50px;
-    right: 50px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    text-align: center;
 }
 .centerText {
     text-align: center;
 }
-#balanceDiv{
-    margin-left: 20%;
-    margin-right: 20%;
+.box{
+    margin: 3%;
     font-size: 150%;
     background-color: white;
     border: 5px solid white;
     border-radius: 9px;
+    text-align: center;
 }
-#balanceTitle{
-    margin: 3%;
+button {
+    background-color: #431D70;
+    border: solid 4px #431D70;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 70%;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 45%;
+    margin-bottom: 5%;
+}
+#qrcode {
+    width: 100%;
+    text-align: center;
+    
+}
+table{
+    margin-left: 30%;
 }

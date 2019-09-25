@@ -1,6 +1,7 @@
 body{
     margin: 15%;
     background: orange;
+    text-align: center;
 }
 
 #title{
@@ -19,13 +20,13 @@ body{
 }
 
 #login form{
-    margin-top: 10%;
+    margin-top: 7%;
     margin-left:20%;
     margin-right:20%;
     align-content: center;
 }
 .fields{
-    border-bottom: solid orange;
+    border-bottom: solid#431D70;
     border-width: 1px;
     width: 100%;
     height: 12%;
@@ -37,8 +38,8 @@ body{
 }
 
 .button {
-    background-color: orange;
-    border-style: none;
+    background-color:#431D70;
+    border: solid#431D70 3px;
     border-radius: 4px;
     color: #ffffff;
     font-size: 100%;
@@ -50,4 +51,6 @@ body{
 #signup{
     margin-bottom: 20%;
 }
-
+img{
+    width: 50%;
+}

@@ -1,4 +1,8 @@
 function signUp() {
+  var node = document.createElement("P");
+  var textnode = document.createTextNode("Check your email to confirm the account");
+  node.appendChild(textnode);
+  document.getElementById("information").appendChild(node);
   var poolData = {
     UserPoolId: _config.cognito.userPoolId,
     ClientId: _config.cognito.clientId
@@ -50,6 +54,6 @@ function signUp() {
     }
     var cognitoUser = userPool.getCurrentUser();
     cognitoUser = result.user;
-    //window.location.href = './dashboard.html';
   });
+
 }

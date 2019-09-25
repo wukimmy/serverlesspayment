@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style -->
-    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../css/signup.css">
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -23,15 +23,15 @@
     <div id="signup">
         <form method="post">
             <span class="icon">
-                <input type="text" id="nameInputRegister" name="name" class="fields" placeholder=" Full Name" required autofocus><br/>
+                <input type="text" id="nameInputRegister" name="name" class="fields" placeholder=" Full Name" required autofocus required><br/>
             </span>
             </span>
             <span class="icon">
-                <input type="date" id="brithDayRegister" name="birth" class="fields" placeholder=" Birthday" required autofocus><br/>
+                <input type="date" id="brithDayRegister" name="birth" class="fields" placeholder=" Birthday" required autofocus required><br/>
             </span>
             </span>
             <span class="icon">
-                <input type="text" id="usernameInputRegister" name="email" class="fields" placeholder=" username@email.com" required autofocus><br/>
+                <input type="text" id="usernameInputRegister" name="email" class="fields" placeholder=" username@email.com" required autofocus required><br/>
             </span>
             <span class="icon">
                 <input type="password" id="password1InputRegister" class="fields" name="password" placeholder=" Password" required><br/>
@@ -39,7 +39,9 @@
             <span class="icon">
                 <input type="password" id="password2InputRegister" class="fields" name="confirmpassword" placeholder=" Repeat Password" required><br/>
             </span>
+            <div id="information"></div>
             <button type="button" class="button" onclick="signUp()">Register</button>
+            <a href="../index.html" id="signup">Already hava en account? Login</a>
         </form>
     </div>
 </body>
