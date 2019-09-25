@@ -46,6 +46,7 @@ function getBalance(acc) {
     var body = 'auth:' + token;
     xhttp.open("GET", url, true);
     xhttp.setRequestHeader('auth', token )
+    xhttp.setRequestHeader('crossOrigin', true )
     //xhttp.onreadystatechange = handler;
     xhttp.send({ 'auth': token});
 }
