@@ -15,7 +15,7 @@ function showUser() {
 function getBalance(acc) {
     $.ajax({
         type: 'GET',
-        url: "https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc,
+        url:  _config.apiInfo.url +"balance?acc=" + acc,
         crossDomain: true,
         contentType: "application/json",
         dataType: "json",

@@ -39,7 +39,6 @@ function signUp() {
     Value: date
   };
 
-
   var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
   var attributeName = new AmazonCognitoIdentity.CognitoUserAttribute(dataName);
   var attributeBirthDay = new AmazonCognitoIdentity.CognitoUserAttribute(dataBirthDay);

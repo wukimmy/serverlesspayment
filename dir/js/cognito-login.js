@@ -25,7 +25,6 @@ function signIn() {
       _config.userInfo.accessToken = result.idToken.jwtToken;
       document.cookie = "accessToken="+_config.userInfo.accessToken;
       getUser();
-      console.log("getting user info 1")
       window.location.href = "../view/dashboard.html";
     },
     onFailure: function (err) {
@@ -35,9 +34,7 @@ function signIn() {
   });
 
   function getUser() {
-    console.log("getting user info")
     cognitoUser.getUserAttributes(function (err, result) {
-      console.log("inside get attribute")
       if (err) {
         alert(err.message);
         return;

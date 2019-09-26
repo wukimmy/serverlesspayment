@@ -1,8 +1,8 @@
 window._config = {
   cognito: {
-    userPoolId: 'us-east-1_7uzYhHzVZ',
-    clientId: '7pmrfai8l5im6jo66a3b8h9f8f',
-    region: 'us-east-1'
+    userPoolId: '[Your userpool id]',
+    clientId: '[Your client id]',
+    region: '[Region created the coginito]'
   },
   userInfo: {
     sub: '0000',
@@ -12,6 +12,6 @@ window._config = {
     session: 'dsfd'
   },
   apiInfo: {
-    url: 'https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev'
+    url: '[API created on API Gateway]'
   }
 };

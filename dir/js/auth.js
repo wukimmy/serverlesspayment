@@ -1,5 +1,4 @@
 function auth(){
-    console.log("Checking session")
     var poolData = {
         UserPoolId: _config.cognito.userPoolId,
         ClientId: _config.cognito.clientId
@@ -17,7 +16,6 @@ function auth(){
                 _config.userInfo.sub = session.sub;
                 _config.userInfo.accessToken = session.sub;
                 _config.userInfo.name = session.name;
-                console.log("sub " + session.sub)
             }
         });
     }else{
