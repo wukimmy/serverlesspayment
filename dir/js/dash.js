@@ -7,14 +7,12 @@ function showUser() {
     token = readCookie('accessToken');
     sub = readCookie('sub');
     getBalance(sub)
-    console.log(document.cookie)
     jQuery('#qrcode').qrcode({
         render: "table",
         text: sub
     });
 }
 function getBalance(acc) {
-    console.log(acc)
     $.ajax({
         type: 'GET',
         url: "https://piywfurbh0.execute-api.us-east-1.amazonaws.com/dev/balance?acc=" + acc,
@@ -28,10 +26,12 @@ function getBalance(acc) {
             Authorization: token
         },
         success: function (data) {
-            console.log(data)
+            document.cookie = "amount="+ data.amount
+            document.getElementById('balance').innerHTML = data.amount;
         },
         error: function(err){
             console.log(err)
+            document.getElementById('balance').innerHTML = "We had an error: " + err;
         }
     })
 }

@@ -6,30 +6,30 @@ body{
 #title{
     width: 100%;
     position: relative;
-    font-size: 200%;
-    color: white;
+    font-size: 300%;
+    color: #431D70;
     text-align: center;
     align-content: center;
-    font-family: 'Courgette', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 
 #transaction{
+    text-align: center;
     background-color: white;
     border-radius: 50px;
 }
 
 #transaction form{
-    margin-top: 10%;
+    margin-top: 4%;
     margin-left:20%;
     margin-right:20%;
     align-content: center;
 }
 .fields{
-    border-bottom: solid orange;
+    border-bottom: solid #431D70;
     border-width: 1px;
-    width: 100%;
+    width: 50%;
     height: 12%;
-    margin-top: 7%;
     font-size: 100%;
 }
 .icon{
@@ -37,22 +37,25 @@ body{
 }
 
 button {
-    background-color: orange;
-    border-style: none;
+    background-color: #431D70;
+    border-style: solid #431D70 4px;
     border-radius: 4px;
     color: #ffffff;
     font-size: 100%;
     cursor: pointer;
-    margin-top: 10%;
-    width: 100%;
-    margin-bottom: 10%;
+    margin-top: 2%;
+    width: 70%;
+    margin-bottom: 2%;
 }
 #transaction{
-    margin-bottom: 20%;
+    margin-top: 7%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 #video{
     background-color: black;
     margin: 5%;
     height: 30%;
 }
+
 

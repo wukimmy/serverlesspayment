@@ -1,7 +1,7 @@
 var AWS = require("aws-sdk");
 let resp
 
-exports.handler =  async function(event, context) {
+exports.handler =  function(event, context) {
     var fromAmount = event.body.fromAmount - event.body.amount;
     var toAmount = parseFloat(event.body.toAmount) + parseFloat(event.body.amount) ;
     const params = {
